@@ -20,6 +20,12 @@ export default function App() {
     });
   }
 
+  function limparCampos() {
+    setInput('');
+    setIdade('');
+    setInfoAluno(undefined);
+  }
+
   function adicionar() {
     setContador((valorAtual) => valorAtual + 1);
   }
@@ -50,6 +56,7 @@ export default function App() {
       <br />
       <br />
       <button onClick={mostrarAluno}>Mostrar Aluno</button>
+      <button onClick={limparCampos}>Limpar Campos</button>
       <hr />
       <h3>Bem vindo: {infoAluno?.nome}</h3>
       <h4>Idade: {infoAluno?.idade}</h4>
